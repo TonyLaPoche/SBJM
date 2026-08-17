@@ -1,5 +1,17 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sebastiendelacombaz.com";
+function resolveSiteUrl() {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (fromEnv) return fromEnv;
+
+  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.replace(/\/$/, "");
+  if (production) return `https://${production}`;
+
+  const preview = process.env.VERCEL_URL?.replace(/\/$/, "");
+  if (preview) return `https://${preview}`;
+
+  return "https://www.sebastiendelacombaz.com";
+}
+
+export const SITE_URL = resolveSiteUrl();
 
 export const artist = {
   name: "Sebastien J. Delacombaz",

@@ -68,9 +68,18 @@ export async function generateMetadata({
       siteName: artist.name,
       locale: locale === "fr" ? "fr_FR" : "en_US",
       alternateLocale: locale === "fr" ? ["en_US"] : ["fr_FR"],
+      images: [
+        {
+          url: "/images/og-portrait.jpg",
+          width: 1200,
+          height: 630,
+          alt: `${artist.name} — ${locale === "fr" ? "Batteur / Compositeur" : "Drummer / Composer"}`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
+      images: ["/images/og-portrait.jpg"],
     },
     robots: {
       index: true,
