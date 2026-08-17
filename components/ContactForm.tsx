@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { artist } from "@/lib/site";
+import { PrivacyNotice } from "./PrivacyNotice";
 
 export function ContactForm() {
   const t = useTranslations("contact");
@@ -69,6 +70,7 @@ export function ContactForm() {
           className="border border-line bg-transparent px-3 py-3 outline-none focus:border-ink"
         />
       </label>
+      <PrivacyNotice />
       {!ready ? (
         <button
           type="submit"

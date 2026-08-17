@@ -10,7 +10,13 @@
     "lessonsTitle": "Cours de batterie en ligne",
     "lessonsDescription": "Réservez un cours de batterie à distance avec Sebastien J. Delacombaz. Tous niveaux, tous styles, en français ou en anglais.",
     "contactTitle": "Contact",
-    "contactDescription": "Contactez Sebastien J. Delacombaz par e-mail, téléphone ou WhatsApp pour les cours, bookings et collaborations."
+    "contactDescription": "Contactez Sebastien J. Delacombaz par e-mail, téléphone ou WhatsApp pour les cours, bookings et collaborations.",
+    "legalTitle": "Mentions légales",
+    "legalDescription": "Mentions légales du site de Sebastien J. Delacombaz : éditeur, hébergement et propriété intellectuelle.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyDescription": "Politique de confidentialité et traitement des données personnelles sur le site de Sebastien J. Delacombaz.",
+    "cookiesTitle": "Politique cookies",
+    "cookiesDescription": "Informations sur les cookies et traceurs utilisés sur le site de Sebastien J. Delacombaz."
   },
   "nav": {
     "about": "À propos",
@@ -136,9 +142,91 @@
   },
   "footer": {
     "rights": "Tous droits réservés.",
-    "lessons": "Cours de batterie en ligne"
+    "lessons": "Cours de batterie en ligne",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies",
+    "manageCookies": "Gérer les cookies"
   },
   "common": {
     "skip": "Aller au contenu"
+  },
+  "notFound": {
+    "label": "Erreur 404",
+    "title": "Cette page s’est égarée hors tempo.",
+    "text": "La page demandée n’existe pas ou a été déplacée. Revenez à l’accueil, explorez les cours ou écrivez directement.",
+    "home": "Accueil",
+    "lessons": "Cours",
+    "contact": "Contact"
+  },
+  "privacyNotice": {
+    "text": "Vos informations sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas revendues.",
+    "link": "Politique de confidentialité"
+  },
+  "cookies": {
+    "bannerLabel": "Confidentialité",
+    "bannerTitle": "Cookies & contenus tiers",
+    "bannerText": "Nous utilisons des cookies nécessaires au site. Les médias (YouTube) et l’analytics (PostHog, si activé) ne se chargent qu’avec votre accord.",
+    "learnMore": "En savoir plus",
+    "acceptAll": "Tout accepter",
+    "reject": "Refuser",
+    "customize": "Personnaliser",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "necessary": "Nécessaires",
+    "necessaryText": "Indispensables au fonctionnement du site (langue, consentement).",
+    "analytics": "Mesure d’audience",
+    "analyticsText": "PostHog, uniquement si la clé est configurée. Aide à comprendre l’usage du site.",
+    "media": "Médias externes",
+    "mediaText": "Permet d’afficher les vidéos YouTube. YouTube peut déposer ses propres cookies.",
+    "youtubeBlocked": "La vidéo YouTube est masquée tant que les cookies médias ne sont pas acceptés.",
+    "loadYoutube": "Charger YouTube",
+    "managePreferences": "Gérer mes préférences"
+  },
+  "cookiesPage": {
+    "label": "Cookies",
+    "title": "Politique cookies",
+    "introTitle": "À quoi servent les cookies ?",
+    "introText": "Les cookies et traceurs permettent de faire fonctionner le site, de mesurer son audience et d’afficher certains contenus externes. Vous pouvez accepter, refuser ou personnaliser ces choix à tout moment.",
+    "necessaryTitle": "Cookies nécessaires",
+    "necessaryText": "Ils mémorisent votre langue et vos choix de consentement. Ils ne nécessitent pas de consentement préalable.",
+    "analyticsTitle": "Mesure d’audience (PostHog)",
+    "analyticsText": "PostHog n’est activé que si une clé technique est configurée et uniquement après votre consentement. Tant que la clé n’est pas branchée, aucun tracking analytics n’est envoyé.",
+    "mediaTitle": "Médias (YouTube)",
+    "mediaText": "Les lecteurs YouTube ne se chargent qu’après acceptation des cookies médias. Sans consentement, une vignette locale s’affiche à la place.",
+    "manageTitle": "Gérer vos choix",
+    "manageText": "Vous pouvez modifier vos préférences à tout moment via le bouton ci-dessous ou le pied de page."
+  },
+  "legal": {
+    "label": "Légal",
+    "title": "Mentions légales",
+    "publisherTitle": "Éditeur du site",
+    "publisherText": "Le site est édité par {name}, batteur et compositeur.",
+    "hostingTitle": "Hébergement",
+    "hostingText": "Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.",
+    "ipTitle": "Propriété intellectuelle",
+    "ipText": "Les textes, images, enregistrements audio et éléments graphiques sont protégés. Toute reproduction non autorisée est interdite, sauf accord préalable de {name}.",
+    "contactTitle": "Contact",
+    "contactText": "Pour toute question relative au site, utilisez la page Contact ou l’adresse e-mail indiquée ci-dessus."
+  },
+  "privacy": {
+    "label": "Confidentialité",
+    "title": "Politique de confidentialité",
+    "controllerTitle": "Responsable du traitement",
+    "controllerText": "Le responsable du traitement est {name}, joignable à {email}.",
+    "dataTitle": "Données collectées",
+    "dataText": "Via les formulaires de contact et de réservation : nom, e-mail, niveau, styles musicaux, fuseau horaire, message et créneau demandé. Des données techniques de navigation peuvent être collectées uniquement si l’analytics est accepté et configuré.",
+    "purposeTitle": "Finalités",
+    "purposeText": "Répondre aux demandes, organiser les cours à distance, assurer le fonctionnement du site et, le cas échéant, mesurer l’audience.",
+    "basisTitle": "Base légale",
+    "basisText": "Exécution de mesures précontractuelles / contrat pour les demandes de cours, intérêt légitime pour le fonctionnement du site, et consentement pour les cookies non essentiels (médias, analytics).",
+    "retentionTitle": "Durées de conservation",
+    "retentionText": "Les échanges liés aux demandes sont conservés le temps nécessaire au suivi de la relation, puis archivés ou supprimés. Les préférences de consentement sont conservées jusqu’à modification ou suppression locale.",
+    "recipientsTitle": "Destinataires",
+    "recipientsText": "Les données de formulaires sont destinées à Sebastien J. Delacombaz. L’hébergeur (Vercel) et, le cas échéant, YouTube ou PostHog peuvent traiter des données techniques selon vos consentements.",
+    "rightsTitle": "Vos droits",
+    "rightsText": "Vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité. Pour les exercer : {email}. Vous pouvez aussi introduire une réclamation auprès d’une autorité de contrôle.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "Les détails des cookies et la gestion du consentement sont décrits dans la politique cookies."
   }
 }

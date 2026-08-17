@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { getAvailableDays } from "@/lib/booking";
 import { bookingConfig, lessonTypes } from "@/lib/site";
+import { PrivacyNotice } from "./PrivacyNotice";
 
 type LessonId = (typeof lessonTypes)[number]["id"];
 
@@ -266,6 +267,12 @@ export function BookingWizard() {
 
       {status === "error" ? (
         <p className="mt-4 text-sm text-bronze-deep">{t("error")}</p>
+      ) : null}
+
+      {step === 3 ? (
+        <div className="mt-6">
+          <PrivacyNotice />
+        </div>
       ) : null}
 
       <div className="mt-8 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">

@@ -7,6 +7,9 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { ConsentProvider } from "@/components/ConsentProvider";
+import { CookieBanner } from "@/components/CookieBanner";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import { artist, SITE_URL } from "@/lib/site";
 import { personJsonLd } from "@/lib/seo";
 import "../globals.css";
@@ -112,16 +115,21 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full bg-paper text-ink">
         <NextIntlClientProvider messages={messages}>
-          <a
-            href="#content"
-            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-3 focus:py-2 focus:text-paper"
-          >
-            {t("skip")}
-          </a>
-          <Header />
-          <main id="content">{children}</main>
-          <Footer />
-          <JsonLd data={personJsonLd()} />
+          <ConsentProvider>
+            <PostHogProvider>
+              <a
+                href="#content"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-3 focus:py-2 focus:text-paper"
+              >
+                {t("skip")}
+              </a>
+              <Header />
+              <main id="content">{children}</main>
+              <Footer />
+              <CookieBanner />
+              <JsonLd data={personJsonLd()} />
+            </PostHogProvider>
+          </ConsentProvider>
         </NextIntlClientProvider>
       </body>
     </html>

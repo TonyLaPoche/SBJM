@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { CookieSettingsButton } from "./CookieSettingsButton";
 import { artist } from "@/lib/site";
 
 export async function Footer() {
@@ -42,7 +43,17 @@ export async function Footer() {
           <Link href="/contact" className="transition-colors hover:text-ink">
             Contact
           </Link>
-          <p>
+          <Link href="/legal" className="transition-colors hover:text-ink">
+            {t("legal")}
+          </Link>
+          <Link href="/privacy" className="transition-colors hover:text-ink">
+            {t("privacy")}
+          </Link>
+          <Link href="/cookies" className="transition-colors hover:text-ink">
+            {t("cookies")}
+          </Link>
+          <CookieSettingsButton variant="link" />
+          <p className="pt-2">
             © {year} {artist.name}. {t("rights")}
           </p>
         </div>

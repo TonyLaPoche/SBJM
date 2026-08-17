@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { TrackList } from "@/components/AudioPlayer";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { buildMetadata, musicGroupJsonLd } from "@/lib/seo";
 import { artist, tracks } from "@/lib/site";
 import type { Locale } from "@/i18n/routing";
@@ -41,15 +42,7 @@ export default async function MusicPage({
 
       <Reveal className="mt-10 block sm:mt-12" variant="scale">
         <section>
-          <div className="aspect-video overflow-hidden bg-ink">
-            <iframe
-              title={t("liveTitle")}
-              src={`https://www.youtube-nocookie.com/embed/${artist.youtubeVideoId}`}
-              className="h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
+          <YouTubeEmbed videoId={artist.youtubeVideoId} title={t("liveTitle")} />
           <p className="mt-4 text-sm text-ink-soft">{t("liveTitle")}</p>
         </section>
       </Reveal>

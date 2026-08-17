@@ -10,7 +10,13 @@
     "lessonsTitle": "Online drum lessons",
     "lessonsDescription": "Book a remote drum lesson with Sebastien J. Delacombaz. All levels, all styles, taught in English or French.",
     "contactTitle": "Contact",
-    "contactDescription": "Contact Sebastien J. Delacombaz by email, phone or WhatsApp for lessons, bookings and collaborations."
+    "contactDescription": "Contact Sebastien J. Delacombaz by email, phone or WhatsApp for lessons, bookings and collaborations.",
+    "legalTitle": "Legal notice",
+    "legalDescription": "Legal notice for Sebastien J. Delacombaz's website: publisher, hosting and intellectual property.",
+    "privacyTitle": "Privacy policy",
+    "privacyDescription": "Privacy policy and personal data processing on Sebastien J. Delacombaz's website.",
+    "cookiesTitle": "Cookie policy",
+    "cookiesDescription": "Information about cookies and trackers used on Sebastien J. Delacombaz's website."
   },
   "nav": {
     "about": "About",
@@ -136,9 +142,91 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "lessons": "Online drum lessons"
+    "lessons": "Online drum lessons",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "manageCookies": "Manage cookies"
   },
   "common": {
     "skip": "Skip to content"
+  },
+  "notFound": {
+    "label": "404 error",
+    "title": "This page dropped out of time.",
+    "text": "The page you requested does not exist or has moved. Head home, explore the lessons, or get in touch.",
+    "home": "Home",
+    "lessons": "Lessons",
+    "contact": "Contact"
+  },
+  "privacyNotice": {
+    "text": "Your details are used only to reply to your request. They are never sold.",
+    "link": "Privacy policy"
+  },
+  "cookies": {
+    "bannerLabel": "Privacy",
+    "bannerTitle": "Cookies & third-party content",
+    "bannerText": "We use necessary cookies to run the site. Media (YouTube) and analytics (PostHog, if enabled) load only with your consent.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept all",
+    "reject": "Reject",
+    "customize": "Customize",
+    "save": "Save",
+    "close": "Close",
+    "necessary": "Necessary",
+    "necessaryText": "Required for the site to work (language, consent).",
+    "analytics": "Audience measurement",
+    "analyticsText": "PostHog, only if a key is configured. Helps understand how the site is used.",
+    "media": "External media",
+    "mediaText": "Allows YouTube videos to load. YouTube may set its own cookies.",
+    "youtubeBlocked": "The YouTube video stays hidden until media cookies are accepted.",
+    "loadYoutube": "Load YouTube",
+    "managePreferences": "Manage preferences"
+  },
+  "cookiesPage": {
+    "label": "Cookies",
+    "title": "Cookie policy",
+    "introTitle": "What are cookies for?",
+    "introText": "Cookies and similar technologies help the site work, measure audience and display some external content. You can accept, reject or customize these choices at any time.",
+    "necessaryTitle": "Necessary cookies",
+    "necessaryText": "They remember your language and consent choices. They do not require prior consent.",
+    "analyticsTitle": "Audience measurement (PostHog)",
+    "analyticsText": "PostHog is enabled only if a technical key is configured and only after your consent. Until the key is connected, no analytics tracking is sent.",
+    "mediaTitle": "Media (YouTube)",
+    "mediaText": "YouTube players load only after media cookies are accepted. Without consent, a local thumbnail is shown instead.",
+    "manageTitle": "Manage your choices",
+    "manageText": "You can update your preferences at any time with the button below or via the footer."
+  },
+  "legal": {
+    "label": "Legal",
+    "title": "Legal notice",
+    "publisherTitle": "Publisher",
+    "publisherText": "This website is published by {name}, drummer and composer.",
+    "hostingTitle": "Hosting",
+    "hostingText": "The site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States.",
+    "ipTitle": "Intellectual property",
+    "ipText": "Texts, images, audio recordings and graphic elements are protected. Unauthorized reproduction is prohibited without prior agreement from {name}.",
+    "contactTitle": "Contact",
+    "contactText": "For any question about the website, use the Contact page or the email address listed above."
+  },
+  "privacy": {
+    "label": "Privacy",
+    "title": "Privacy policy",
+    "controllerTitle": "Data controller",
+    "controllerText": "The data controller is {name}, reachable at {email}.",
+    "dataTitle": "Data collected",
+    "dataText": "Through contact and booking forms: name, email, level, musical styles, timezone, message and requested slot. Technical browsing data may be collected only if analytics is accepted and configured.",
+    "purposeTitle": "Purposes",
+    "purposeText": "To answer requests, organize remote lessons, keep the website running and, when applicable, measure audience.",
+    "basisTitle": "Legal basis",
+    "basisText": "Pre-contractual / contractual steps for lesson requests, legitimate interest for site operation, and consent for non-essential cookies (media, analytics).",
+    "retentionTitle": "Retention",
+    "retentionText": "Request-related exchanges are kept for as long as needed to follow up, then archived or deleted. Consent preferences are kept until changed or cleared locally.",
+    "recipientsTitle": "Recipients",
+    "recipientsText": "Form data is intended for Sebastien J. Delacombaz. The host (Vercel) and, when applicable, YouTube or PostHog may process technical data according to your consent.",
+    "rightsTitle": "Your rights",
+    "rightsText": "You have rights of access, rectification, erasure, restriction, objection and portability. To exercise them: {email}. You may also lodge a complaint with a supervisory authority.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "Cookie details and consent management are described in the cookie policy."
   }
 }
