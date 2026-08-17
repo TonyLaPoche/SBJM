@@ -25,13 +25,16 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-geist-sans), Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 ::selection {
@@ -87,11 +90,11 @@ body {
 }
 
 .reveal-left {
-  transform: translate3d(-1.75rem, 0, 0);
+  transform: translate3d(-1rem, 0, 0);
 }
 
 .reveal-right {
-  transform: translate3d(1.75rem, 0, 0);
+  transform: translate3d(1rem, 0, 0);
 }
 
 .reveal.is-visible {
