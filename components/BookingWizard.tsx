@@ -79,14 +79,16 @@ export function BookingWizard() {
 
   if (status === "success" && links) {
     return (
-      <div className="border border-line bg-paper-deep/50 p-8">
+      <div className="border border-line bg-paper-deep/50 p-5 sm:p-8">
         <p className="eyebrow">{t("bookTitle")}</p>
-        <h3 className="display mt-4 text-4xl">{t("successTitle")}</h3>
+        <h3 className="display mt-4 text-[clamp(2rem,8vw,2.75rem)]">
+          {t("successTitle")}
+        </h3>
         <p className="mt-4 max-w-xl text-ink-soft">{t("successText")}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
             href={links.mailto}
-            className="border border-ink bg-ink px-5 py-3 text-xs tracking-[0.16em] uppercase text-paper"
+            className="border border-ink bg-ink px-5 py-3.5 text-center text-xs tracking-[0.16em] uppercase text-paper"
           >
             {t("confirmEmail")}
           </a>
@@ -94,7 +96,7 @@ export function BookingWizard() {
             href={links.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="border border-ink px-5 py-3 text-xs tracking-[0.16em] uppercase"
+            className="border border-ink px-5 py-3.5 text-center text-xs tracking-[0.16em] uppercase"
           >
             {t("confirmWhatsapp")}
           </a>
@@ -115,11 +117,14 @@ export function BookingWizard() {
   }
 
   return (
-    <form onSubmit={submit} className="border border-line p-6 md:p-8">
-      <div className="mb-8 flex flex-wrap gap-4 text-[0.7rem] tracking-[0.18em] uppercase text-ink-soft">
+    <form onSubmit={submit} className="border border-line p-4 sm:p-6 md:p-8">
+      <div className="mb-6 flex gap-3 overflow-x-auto pb-1 text-[0.65rem] tracking-[0.16em] uppercase text-ink-soft sm:mb-8 sm:flex-wrap sm:gap-4 sm:overflow-visible sm:pb-0 sm:text-[0.7rem] sm:tracking-[0.18em]">
         {[t("stepType"), t("stepDate"), t("stepTime"), t("stepDetails")].map(
           (label, index) => (
-            <span key={label} className={index === step ? "text-ink" : ""}>
+            <span
+              key={label}
+              className={`shrink-0 transition-colors ${index === step ? "text-ink" : ""}`}
+            >
               0{index + 1} {label}
             </span>
           ),
@@ -127,13 +132,13 @@ export function BookingWizard() {
       </div>
 
       {step === 0 ? (
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-3">
           {lessonTypes.map((item) => (
             <button
               key={item.id}
               type="button"
               onClick={() => setLessonId(item.id)}
-              className={`border p-5 text-left transition-colors ${
+              className={`border p-4 text-left transition-all duration-300 sm:p-5 ${
                 lessonId === item.id
                   ? "border-ink bg-paper-deep"
                   : "border-line hover:border-ink"
@@ -155,13 +160,13 @@ export function BookingWizard() {
       {step === 1 ? (
         <div>
           <p className="mb-4 text-sm text-ink-soft">{t("timezoneNote")}</p>
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-7">
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-7">
             {days.map((day) => (
               <button
                 key={day.iso}
                 type="button"
                 onClick={() => setDate(day.iso)}
-                className={`border px-2 py-3 text-center ${
+                className={`border px-1.5 py-3 text-center transition-colors sm:px-2 ${
                   date === day.iso
                     ? "border-ink bg-paper-deep"
                     : "border-line hover:border-ink"
@@ -263,7 +268,7 @@ export function BookingWizard() {
         <p className="mt-4 text-sm text-bronze-deep">{t("error")}</p>
       ) : null}
 
-      <div className="mt-8 flex items-center justify-between gap-4">
+      <div className="mt-8 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="button"
           onClick={() => setStep((value) => Math.max(0, value - 1))}
@@ -277,7 +282,7 @@ export function BookingWizard() {
             type="button"
             onClick={() => setStep((value) => value + 1)}
             disabled={step === 2 && !time}
-            className="border border-ink bg-ink px-5 py-3 text-xs tracking-[0.16em] uppercase text-paper disabled:opacity-40"
+            className="border border-ink bg-ink px-5 py-3.5 text-xs tracking-[0.16em] uppercase text-paper disabled:opacity-40"
           >
             {t("next")}
           </button>
@@ -285,14 +290,14 @@ export function BookingWizard() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="border border-ink bg-ink px-5 py-3 text-xs tracking-[0.16em] uppercase text-paper disabled:opacity-40"
+            className="border border-ink bg-ink px-5 py-3.5 text-xs tracking-[0.16em] uppercase text-paper disabled:opacity-40"
           >
             {status === "loading" ? t("sending") : t("submit")}
           </button>
         )}
       </div>
 
-      <p className="mt-6 text-sm text-ink-soft">
+      <p className="mt-6 text-sm leading-relaxed text-ink-soft">
         {t(lessonCopy[lesson.id].title)} · {date} {time ? `· ${time}` : ""} ·{" "}
         {lesson.price} €
       </p>

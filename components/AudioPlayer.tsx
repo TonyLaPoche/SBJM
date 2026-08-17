@@ -64,7 +64,7 @@ export function AudioPlayer({
   }
 
   return (
-    <div className="border-b border-line py-5">
+    <div className="border-b border-line py-4 sm:py-5">
       <audio
         ref={audioRef}
         src={track.src}
@@ -80,7 +80,7 @@ export function AudioPlayer({
           setCurrent(0);
         }}
       />
-      <div className="flex items-center gap-4">
+      <div className="flex items-start gap-3 sm:items-center sm:gap-4">
         <button
           type="button"
           onClick={toggle}
@@ -97,17 +97,24 @@ export function AudioPlayer({
           )}
         </button>
         <div className="min-w-0 flex-1">
-          <p className="truncate font-medium">{track.title}</p>
-          <p className="text-sm text-ink-soft">
-            {t("performedBy")} {track.ensemble}
-          </p>
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="truncate font-medium">{track.title}</p>
+              <p className="text-sm text-ink-soft">
+                {t("performedBy")} {track.ensemble}
+              </p>
+            </div>
+            <p className="shrink-0 pt-0.5 text-[0.7rem] tabular-nums text-ink-soft sm:text-xs">
+              {formatTime(current)} / {formatTime(track.duration)}
+            </p>
+          </div>
           <div className="mt-3 h-px bg-line">
-            <div className="h-px bg-ink" style={{ width: `${progress * 100}%` }} />
+            <div
+              className="h-px bg-ink transition-[width] duration-150"
+              style={{ width: `${progress * 100}%` }}
+            />
           </div>
         </div>
-        <p className="shrink-0 text-xs tabular-nums text-ink-soft">
-          {formatTime(current)} / {formatTime(track.duration)}
-        </p>
       </div>
     </div>
   );
